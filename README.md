@@ -12,6 +12,7 @@ all multiples of int1 and int2 are replaced by string1string2
 There are makefile to manage the build of this app. 
 If you want to test the app use : 
 ```shell
+make deps
 make
 ./fizzbuzz
 ```
