@@ -12,7 +12,7 @@ BINARY_NAME=fizzbuzz
 all: lint tool test build
 
 test: 
-	$(GOTEST) -short $(go list ./... | grep -v /vendor/)
+	export GIN_MODE=release && $(GOTEST) -short $(go list ./... | grep -v /vendor/)
 
 build:
 	$(GOBUILD) -v .
