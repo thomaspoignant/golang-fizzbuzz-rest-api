@@ -35,7 +35,7 @@ The best way to deploy this app is with docker you can use this command to build
 make docker-build
 ```
 
-It use the distroless build of the ```golang:1.11``` version of the image to be lightweight and secure.
+It use the ```distroless``` build of the ```golang:1.11``` version of the image to be lightweight and secure.
 
 See more about distroless : https://github.com/GoogleContainerTools/distroless
 
