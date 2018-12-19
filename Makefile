@@ -17,6 +17,9 @@ test:
 build:
 	$(GOBUILD) -v .
 
+build-linux:
+	GOOS=linux $(GOBUILD) -v .
+
 tool:
 	$(GOVET) ./...; true
 	$(GOFMT) -w .
@@ -39,6 +42,9 @@ deps:
 docker-build: clean deps build
 	docker build -t fizzbuzz .
 	docker run --rm -e GIN_MODE='release' -p 8080:8080 fizzbuzz:latest 
+
+run-as-lambda: build-linux
+	sam local start-api
 
 help:
 	@echo "make: compile packages and dependencies"
