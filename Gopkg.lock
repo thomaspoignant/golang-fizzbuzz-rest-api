@@ -2,6 +2,30 @@
 
 
 [[projects]]
+  digest = "1:8b4d009bfb2d13472dad368bf7520c482dd7f8a190436da4e6d52111c0a2e697"
+  name = "github.com/aws/aws-lambda-go"
+  packages = [
+    "events",
+    "lambda",
+    "lambda/messages",
+    "lambdacontext",
+  ]
+  pruneopts = "UT"
+  revision = "9e3676ee8ca83aee500682f382e10b9d03660093"
+  version = "v1.8.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:88ccc9fd3aaa4acfbc6d0d43e7693067ae6fb8f367869fe36b3e3836eb6806c4"
+  name = "github.com/awslabs/aws-lambda-go-api-proxy"
+  packages = [
+    "core",
+    "gin",
+  ]
+  pruneopts = "UT"
+  revision = "3a4d35011e4a52d877a5fcb0aa494bbb4d20e27b"
+
+[[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
@@ -149,6 +173,9 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/aws/aws-lambda-go/events",
+    "github.com/aws/aws-lambda-go/lambda",
+    "github.com/awslabs/aws-lambda-go-api-proxy/gin",
     "github.com/gin-gonic/gin",
     "github.com/sirupsen/logrus",
     "github.com/stretchr/testify/assert",

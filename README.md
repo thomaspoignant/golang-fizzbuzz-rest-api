@@ -40,6 +40,12 @@ It use the ```distroless``` build of the ```golang:1.11``` version of the image 
 
 See more about distroless : https://github.com/GoogleContainerTools/distroless
 
+## Run as AWS Lambda
+This project can be run as a AWS lambda.
+To test it locally via sam local you use ```make run-as-lambda```.
+
+To start the app as a lambda, you need to set an env variable ```RUN_AS=lambda```.
+
 ## Other make command
  - Download dependencies : ```make deps```
  - Execute unit tests : ```make test```
