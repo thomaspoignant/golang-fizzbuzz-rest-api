@@ -1,3 +1,5 @@
+https://travis-ci.com/thomaspoignant/golang-fizzbuzz-rest-api.svg?branch=master
+
 # Fizzbuzz Rest API
 
 ## What this project do
