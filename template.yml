@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: An example API written in Golang
+Resources:
+  FizzBuzzAPI:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: go1.x
+      Handler: golang-fizzbuzz-rest-api
+      Timeout: 10
+      Events:
+        RootHandler:
+          Type: Api
+          Properties:
+            Path: '/'
+            Method: get
+        fizzbuzz:
+          Type: Api
+          Properties:
+            Path: '/v1/fizzbuzz'
+            Method: get
+      Environment: 
+        Variables:
+          GIN_MODE: release
+          RUN_AS: lambda
+
