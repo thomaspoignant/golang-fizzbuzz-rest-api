@@ -9,7 +9,7 @@ GOFMT=gofmt
 GOLINT=golint
 BINARY_NAME=golang-fizzbuzz-rest-api
 
-all: lint tool test build
+all: deps lint tool test coverage build
 
 test: 
 	export GIN_MODE=release && $(GOTEST) -short $(go list ./... | grep -v /vendor/)
