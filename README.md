@@ -44,7 +44,10 @@ See more about distroless : https://github.com/GoogleContainerTools/distroless
 
 ## Run as AWS Lambda
 This project can be run as a AWS lambda.
-To test it locally via sam local you use ```make run-as-lambda```.
+To test it locally via sam local you use 
+```shell
+make run-as-lambda
+```
 
 To start the app as a lambda, you need to set an env variable ```RUN_AS=lambda```.
 
