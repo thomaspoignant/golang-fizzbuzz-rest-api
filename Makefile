@@ -46,6 +46,9 @@ docker-build: clean deps build
 run-as-lambda: build-linux
 	sam local start-api
 
+run-as-lambda: build-linux
+	sam local start-api
+
 help:
 	@echo "make: compile packages and dependencies"
 	@echo "make tool: run specified go tool"

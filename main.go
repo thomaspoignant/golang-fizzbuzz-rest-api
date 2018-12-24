@@ -6,9 +6,15 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+<<<<<<< HEAD
 	core "github.com/thomaspoignant/golang-fizzbuzz-rest-api/core"
 
 	log "github.com/sirupsen/logrus"
+=======
+
+	log "github.com/sirupsen/logrus"
+	core "gitlab.com/thomas.poignant/fizzbuzz/core"
+>>>>>>> master
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
