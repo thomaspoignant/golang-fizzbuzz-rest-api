@@ -2,11 +2,17 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	core "github.com/thomaspoignant/golang-fizzbuzz-rest-api/core"
+
 	log "github.com/sirupsen/logrus"
-	core "gitlab.com/thomas.poignant/fizzbuzz/core"
+
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
+	ginadapter "github.com/awslabs/aws-lambda-go-api-proxy/gin"
 )
 
 // FizzbuzzRequest is the set of parameters you should have to call the api
@@ -18,9 +24,39 @@ type FizzbuzzRequest struct {
 	Limit   int    `form:"limit" binding:"required"`
 }
 
+var initialized = false
+var ginLambda *ginadapter.GinLambda
+
+// Handler to wrap gin to lambda
+func Handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	if !initialized {
+		router := SetupRouter()
+		ginLambda = ginadapter.New(router)
+		initialized = true
+	}
+
+	// If no name is provided in the HTTP request body, throw an error
+	return ginLambda.Proxy(req)
+}
+
 func main() {
+	switch runAs := os.Getenv("RUN_AS"); runAs {
+	case "lambda":
+		log.Info("Run as lambda")
+		lambdaRun()
+	default:
+		log.Info("Run locally")
+		localRun()
+	}
+}
+
+func localRun() {
 	router := SetupRouter()
 	router.Run() // listen and serve on 0.0.0.0:8080
+}
+
+func lambdaRun() {
+	lambda.Start(Handler)
 }
 
 // SetupRouter determine what to do for each api calls

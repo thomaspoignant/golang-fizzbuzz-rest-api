@@ -7,7 +7,7 @@ GOGET=$(GOCMD) get
 GOVET=$(GOCMD) vet
 GOFMT=gofmt
 GOLINT=golint
-BINARY_NAME=fizzbuzz
+BINARY_NAME=golang-fizzbuzz-rest-api
 
 all: lint tool test build
 
@@ -16,6 +16,9 @@ test:
 
 build:
 	$(GOBUILD) -v .
+
+build-linux:
+	GOOS=linux $(GOBUILD) -v .
 
 tool:
 	$(GOVET) ./...; true
@@ -37,8 +40,11 @@ deps:
 	dep ensure
 
 docker-build: clean deps build
-	docker build -t fizzbuzz .
-	docker run --rm -e GIN_MODE='release' -p 8080:8080 fizzbuzz:latest 
+	docker build -t $(BINARY_NAME) .
+	docker run --rm -e GIN_MODE='release' -p 8080:8080 $(BINARY_NAME):latest 
+
+run-as-lambda: build-linux
+	sam local start-api
 
 help:
 	@echo "make: compile packages and dependencies"

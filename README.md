@@ -12,6 +12,7 @@ all multiples of int1 and int2 are replaced by string1string2
 There are makefile to manage the build of this app. 
 If you want to test the app use : 
 ```shell
+make deps
 make
 ./fizzbuzz
 ```
@@ -38,6 +39,12 @@ make docker-build
 It use the ```distroless``` build of the ```golang:1.11``` version of the image to be lightweight and secure.
 
 See more about distroless : https://github.com/GoogleContainerTools/distroless
+
+## Run as AWS Lambda
+This project can be run as a AWS lambda.
+To test it locally via sam local you use ```make run-as-lambda```.
+
+To start the app as a lambda, you need to set an env variable ```RUN_AS=lambda```.
 
 ## Other make command
  - Download dependencies : ```make deps```
