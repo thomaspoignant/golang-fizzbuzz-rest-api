@@ -15,24 +15,15 @@
   version = "v1.8.0"
 
 [[projects]]
-<<<<<<< HEAD
   digest = "1:7b717cf331b3737b4fdf30f73d041ef2c21a35e1eda6533f3f6fb12102793fd3"
-=======
-  branch = "master"
-  digest = "1:88ccc9fd3aaa4acfbc6d0d43e7693067ae6fb8f367869fe36b3e3836eb6806c4"
->>>>>>> master
   name = "github.com/awslabs/aws-lambda-go-api-proxy"
   packages = [
     "core",
     "gin",
   ]
   pruneopts = "UT"
-<<<<<<< HEAD
   revision = "5e023998abc6065e7a1ba4efb4c66fbd5eb7163a"
   version = "v0.2.0"
-=======
-  revision = "3a4d35011e4a52d877a5fcb0aa494bbb4d20e27b"
->>>>>>> master
 
 [[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
