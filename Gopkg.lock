@@ -15,15 +15,15 @@
   version = "v1.8.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:88ccc9fd3aaa4acfbc6d0d43e7693067ae6fb8f367869fe36b3e3836eb6806c4"
+  digest = "1:7b717cf331b3737b4fdf30f73d041ef2c21a35e1eda6533f3f6fb12102793fd3"
   name = "github.com/awslabs/aws-lambda-go-api-proxy"
   packages = [
     "core",
     "gin",
   ]
   pruneopts = "UT"
-  revision = "3a4d35011e4a52d877a5fcb0aa494bbb4d20e27b"
+  revision = "5e023998abc6065e7a1ba4efb4c66fbd5eb7163a"
+  version = "v0.2.0"
 
 [[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
@@ -144,14 +144,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:4f41bc3fb253bff64e1ec1a21dd7b58438cc2ac0623615483507c1ca3e7f9f93"
+  digest = "1:3d5e79e10549fd9119cbefd614b6d351ef5bd0be2f2b103a4199788e784cbc68"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "73d4af5aa059c8c2dfcf25aad4efd6ce7bc9adc1"
+  revision = "b4a75ba826a64a70990f11a225237acd6ef35c9f"
 
 [[projects]]
   digest = "1:cbc72c4c4886a918d6ab4b95e347ffe259846260f99ebdd8a198c2331cf2b2e9"

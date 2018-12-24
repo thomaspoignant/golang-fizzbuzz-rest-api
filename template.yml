@@ -7,7 +7,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: go1.x
-      Handler: fizzbuzz
+      Handler: golang-fizzbuzz-rest-api
       Timeout: 10
       Events:
         RootHandler:
