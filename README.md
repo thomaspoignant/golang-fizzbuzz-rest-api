@@ -1,4 +1,4 @@
-![build status](https://travis-ci.com/thomaspoignant/golang-fizzbuzz-rest-api.svg?branch=master)
+![Build Status](https://travis-ci.com/thomaspoignant/golang-fizzbuzz-rest-api.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/thomaspoignant/golang-fizzbuzz-rest-api/badge.svg?branch=master)](https://coveralls.io/github/thomaspoignant/golang-fizzbuzz-rest-api?branch=master)
 
 # Fizzbuzz Rest API
 
