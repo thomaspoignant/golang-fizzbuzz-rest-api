@@ -12,7 +12,7 @@ all multiples of int1 and int2 are replaced by string1string2
 
 ## Before building the app
 Before building the app you should download your dependencies.
-To do that go on your project, be sure to be on your GOPATH folder and run 
+To do that go on your project, be sure to be on your GOPATH folder and run :
 ```shell
 make deps
 ```
