@@ -10,11 +10,18 @@ all multiples of int1 are replaced by string1,
 all multiples of int2 are replaced by string2,
 all multiples of int1 and int2 are replaced by string1string2
 
+## Before building the app
+Before building the app you should download your dependencies.
+To do that go on your project, be sure to be on your GOPATH folder and run 
+```shell
+make deps
+```
+After that you can build the app.
+
 ## Build the APP
 There are makefile to manage the build of this app. 
 If you want to test the app use : 
 ```shell
-make deps
 make
 ./fizzbuzz
 ```
