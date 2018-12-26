@@ -3,5 +3,8 @@ go:
   - "1.11"
 before_install:
   - go get github.com/mattn/goveralls
+  - go get github.com/golang/dep/cmd/dep
+  - go get golang.org/x/lint/golint
+  - dep ensure
 script:
   - $GOPATH/bin/goveralls -service=travis-ci
