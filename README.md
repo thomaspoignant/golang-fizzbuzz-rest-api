@@ -10,6 +10,10 @@ all multiples of int1 are replaced by string1,
 all multiples of int2 are replaced by string2,
 all multiples of int1 and int2 are replaced by string1string2
 
+## Why this project?
+This is a the first project I do when I start a new language. 
+You can see the **rust** version here https://github.com/thomaspoignant/rust-fizzbuzz-rest-api. 
+
 ## Before building the app
 Before building the app you should download your dependencies.
 To do that go on your project, be sure to be on your GOPATH folder and run :
